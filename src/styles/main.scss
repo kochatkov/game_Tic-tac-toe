@@ -2,6 +2,89 @@
 @import "fonts";
 @import "typography";
 
+html {
+  font-family: "Comic Neue", cursive;
+}
+
 body {
-  background: $c-gray;
+  background: lightgrey;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+  width: 310px;
+  margin: auto;
+  border-radius: 2px;
+}
+
+.wrapper__container {
+  position: relative;
+  border: 2px solid white;
+  width: 600px;
+  border-radius: 20px;
+  background: lightpink;
+  height: 500px;
+  margin: 70px auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 5px;
+  background: white;
+}
+
+.cell {
+  text-align: center;
+  background: lightpink;
+  font-size: 80px;
+  color: white;
+}
+
+.button {
+  display: block;
+  background-color: transparent;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  outline: none;
+  transition: 0.2s;
+  margin: 0 auto 65px;
+  &:hover,
+  &:focus {
+    background: white;
+    color: pink;
+  }
+}
+
+.winner_text {
+  background: lightgrey;
+  border: 2px solid white;
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+  width: 60%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.winner_paragraph {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  line-height: 95px;
 }
