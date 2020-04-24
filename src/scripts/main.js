@@ -79,6 +79,8 @@ function createGame(x) {
   if (x === 'D') {
     p.textContent = 'Draw!!!';
   }
+
+  restarter();
 }
 
 function restart() {
@@ -86,4 +88,11 @@ function restart() {
     location.reload();
     counter = 0;
   });
+}
+
+function restarter() {
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].innerHTML = '';
+  }
+  counter = 0;
 }
